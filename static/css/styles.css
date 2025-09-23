@@ -1,0 +1,253 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f0f4f0;
+  color: #333;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.alumno-card {
+  background-color: white;
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.alumno-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.dropbtn {
+  background-color: #3498bd;
+  color: white;
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: #2c3e50;
+}
+
+.dropdown-content {
+  display: block;
+  margin-top: 1em;
+}
+
+.mes button {
+  background-color: #34495e;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  padding: 0.7em 1em;
+  margin: 0.4em;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.mes button:hover {
+  background-color: #2c3e50;
+}
+
+/* Lista de tareas (oculta por defecto) */
+
+.tareas {
+  list-style: none;
+  padding: 0 0 0 1em;
+  margin: 0.5em 0;
+}
+
+.tareas li {
+  margin: 0.3em 0;
+}
+
+.tareas a {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Area de retroalimentación */
+
+.retro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.boton-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+button {
+  margin-top: 1em;
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: #27ae60;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+footer {
+  text-align: center;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1.5em 1em;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+}
+
+footer p {
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Diseno responsivo para moviles */
+
+@media (max-width: 600px) {
+  .alumno-card {
+    padding: 1em;
+  }
+
+  .dropbtn,
+  button {
+    width: 100vw;
+  }
+
+  .mes {
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 0.9em;
+    padding: 1em;
+  }
+}
+
+.oculto {
+  display: none;
+}
+
+/*
+Si, pero quien nos curara del fuego sordo,
+del fuego sin color que corre al anochecer por la Rue de la Huchette,
+saliendo de los portales carcomidos,
+de los parvos zaguanes,
+del fuego sin imagen que lame las piedras
+y nos acecha en los vanos de las puertas.
+Como haremos para lavarnos de su quemadura dulce que prosigue,
+que se aposenta para durar aliada al tiempo y al recuerdo,
+a las sustencias pegajosas que nos retienen de este lado,
+y que nos ardera dulcemente hasta calcinarnos.
+
+Entonces es mejor pactar como los gatos y como los musgos,
+trabar una amistad inmediata con las porteras de voces roncas,
+con las criaturas palidas y sufrientes que acechan en las ventanas
+jugando con una rama seca.
+Ardiendo asi sin tregua,
+soportando la quemadura central que avanza
+como la madurez paulatina en un fruto.
+Ser el pulso de una hoguera
+en esta marana de piedra interminable.
+Caminar por las noches de nuestras vidas
+con la obediencia de la sangre
+en su circuito ciego.
+*/
+
+
+/*
+Me miras,
+de cerca me miras,
+cada vez mas de cerca
+y entonces jugamos al ciclope.
+Nos miramos cada mas de cerca,
+y nuestros ojos se agrandan,
+se acercan entre si,
+se superponen
+y los ciclopes se miran,
+respirando confundidos,
+las bocas se encuentran y luchan tibiamente,
+mordiendose con los labios,
+apoyando apenas la lengua en los dientes,
+jugando en sus recintos donde un aire pesado
+va y viene con un perfume viejo y un silencio.
+
+Entonces mis manos buscn hundirse en tu pelo,
+acariciar lentamente la profundidad de tu pelo
+mientras nos besamos,
+como si tuvieramos la boca llena de flores o de peces,
+de movimientos vivos,
+de fragancia oscura.
+
+Y si nos mordemos, el dolor es dulce.
+Y si nos ahogamos
+en un breve y terrible absorber simultaneo del aliento,
+esa instantanea muerte es bella.
+Y hay una sola saliva
+y un solo sabor a fruta madura.
+Y yo te siento teblar contra mi
+como una luna en el agua.
+*/
+
+/*
+En la candente manana en la que Beatriz Viterbo murio,
+en su imperiosa agonia que no se rebajoa ningun instante
+ni al sentimentalismo ni al miedo,
+note que las carteleras de fierro de la plaza Constitución
+habian cambiado un aviso de cigarrillos rubios 
+*/

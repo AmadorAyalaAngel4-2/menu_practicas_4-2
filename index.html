@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Inicia los metadatos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Actividades</title>
+    <link rel="stylesheet" href="css/styles.css" /></head
+  ><!-- Termina los metadatos -->
+  <body>
+    <header>
+      <h1>Menu de Aplicaciones de Web Practicas</h1>
+    </header>
+    <!--  Inicia Tarjeta del Alumno  -->
+    <div class="alumno-card">
+      <img src="assets/Images/mi-foto.jpg" alt="Foto del Alumno" />
+      <script src="js/script.js" defer></script>
+      <h2>Amador Ayala Angel Alberto</h2>
+      <p>DS4-2 Aplicaciones Web</p>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="ocultarLista()">Selecciona un mes</button>
+      </div>
+
+      <div class="dropdown-content mes">
+        <button class="dropbtn" onclick="mostrarTareas('septiembre')">Septiembre</button>
+        <button class="dropbtn" onclick="mostrarTareas('octubre')">Octubre</button>
+        <button class="dropbtn" onclick="mostrarTareas('noviembre')">Noviembre</button>
+      </div>
+      <ul id="lista-tareas" class="tareas oculto"></ul>
+    </div>
+    <!--  Termina Tarjeta del Alumno  -->
+
+    <div class="retro-container">
+      <label for="comentario">Tu comentario</label>
+      <textarea
+        name="comentario"
+        id="comentario"
+        rows="4"
+        cols="50"
+        placeholder="Escribe tu comentario aqui...."
+      ></textarea>
+      <div class="boton-container">
+        <button type="submit" onclick="mostrarMensaje()">Enviar retroalimentación</button>
+      </div>
+    </div>
+    <footer>
+      <p>© 2025 Menu Clase - Amador Ayala Angel Alberto</p>
+    </footer>
+  </body>
+</html>
