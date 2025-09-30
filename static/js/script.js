@@ -1,8 +1,8 @@
 function mostrarTareas(mes) {
   const tareas = {
     septiembre: [
-      { texto: "HTML - CSS - JS - Audio", url: "./audio.html" },
-      { texto: "HTML - CSS - JS - Video", url: "./video.html" },
+      { texto: "HTML - CSS - JS - Audio", url: "../static/audio.html" },
+      { texto: "HTML - CSS - JS - Video", url: "../static/video.html" },
     ],
     octubre: [
       {
