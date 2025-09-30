@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio de Menu de Practicas</title>
+    <link rel="stylesheet" href="./css/audio_styles.css" />
+    <script src="./js/audio_script.js" defer></script>
+  </head>
+  <body>
+    <h1>Reproductor de Audio</h1>
+    <audio controls>
+      <source src="./assets/audios/1.mp3" type="audio/mp3" />
+    </audio>
+    <div>
+      <button id="btnPlay">
+        <img src="./assets/images/play-icon.svg" alt="Play" />
+      </button>
+      <input type="range" min="0" max="1" step="0.1" id="sliderVolume" />
+    </div>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 :root {
     --gap: 12px;
-    --maxw: 920;
+    --maxw: 920px;
     --fs-base: clamp(14px,  2.3vw, 18px);
 }
 

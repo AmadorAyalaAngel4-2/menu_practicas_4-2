@@ -1,7 +1,7 @@
 function mostrarTareas(mes) {
   const tareas = {
     septiembre: [
-      { texto: "HTML - CSS - JS - Audio", url: "https://misitio.com/ej-1" },
+      { texto: "HTML - CSS - JS - Audio", url: "./audio.html" },
       { texto: "HTML - CSS - JS - Video", url: "./video.html" },
     ],
     octubre: [
