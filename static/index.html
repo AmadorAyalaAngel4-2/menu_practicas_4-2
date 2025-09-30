@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu Actividades</title>
-    <link rel="stylesheet" href="static/css/styles.css" /></head
+    <link rel="stylesheet" href="../static/css/styles.css" /></head
   ><!-- Termina los metadatos -->
   <body>
     <header>
@@ -13,18 +13,26 @@
     </header>
     <!--  Inicia Tarjeta del Alumno  -->
     <div class="alumno-card">
-      <img src="static/assets/images/mi-foto.jpg" alt="Foto del Alumno" />
-      <script src="static/js/script.js" defer></script>
+      <img src="../static/assets/images/mi-foto.jpg" alt="Foto del Alumno" />
+      <script src="../static/js/script.js" defer></script>
       <h2>Amador Ayala Angel Alberto</h2>
       <p>DS4-2 Aplicaciones Web</p>
       <div class="dropdown">
-        <button class="dropbtn" onclick="ocultarLista()">Selecciona un mes</button>
+        <button class="dropbtn" onclick="ocultarLista()">
+          Selecciona un mes
+        </button>
       </div>
 
       <div class="dropdown-content mes">
-        <button class="dropbtn" onclick="mostrarTareas('septiembre')">Septiembre</button>
-        <button class="dropbtn" onclick="mostrarTareas('octubre')">Octubre</button>
-        <button class="dropbtn" onclick="mostrarTareas('noviembre')">Noviembre</button>
+        <button class="dropbtn" onclick="mostrarTareas('septiembre')">
+          Septiembre
+        </button>
+        <button class="dropbtn" onclick="mostrarTareas('octubre')">
+          Octubre
+        </button>
+        <button class="dropbtn" onclick="mostrarTareas('noviembre')">
+          Noviembre
+        </button>
       </div>
       <ul id="lista-tareas" class="tareas oculto"></ul>
     </div>
@@ -40,7 +48,9 @@
         placeholder="Escribe tu comentario aqui...."
       ></textarea>
       <div class="boton-container">
-        <button type="submit" onclick="mostrarMensaje()">Enviar retroalimentación</button>
+        <button type="submit" onclick="mostrarMensaje()">
+          Enviar retroalimentación
+        </button>
       </div>
     </div>
     <footer>
