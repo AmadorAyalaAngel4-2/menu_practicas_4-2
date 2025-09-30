@@ -1,0 +1,43 @@
+:root {
+    --gap: 12px;
+    --maxw: 920;
+    --fs-base: clamp(14px,  2.3vw, 18px);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    font-size: clamp(20px, 5vw, 32px);
+    font-weight: 700;
+}
+
+video {
+    width: 100%;
+    max-width: var(--maxw);
+    aspect-ratio: 16/9;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid #2c3e50;
+}
+
+@media (max-width: 900px) {
+    :root {
+        --gap: 10px;
+    }
+}
