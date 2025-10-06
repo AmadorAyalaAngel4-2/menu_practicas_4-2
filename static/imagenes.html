@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/imagenes_styles.css" />
+    <title>Amador Ayala - Fotos</title>
+  </head>
+  <body>
+    <script src="./js/imagenes_script.js" defer></script>
+    <h1>Práctica de Fotografica y Responsiva</h1>
+    <p>Tres estilos: horizontal, vertical y tipo abanico.</p>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">Juegos & Galería</div>
+        <button class="menu-toggle">≡</button>
+        <nav class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#galeria-clasica">Galería clásica</a>
+          <a href="#galeria-vertical">Galería vertical</a>
+          <a href="#galeria-abanico">Galería abanico</a>
+        </nav>
+      </div>
+    </header>
+      <section id="galeria-clasica" class="section">
+        <div class="container">
+          <h2>Galería clasica (grid fluido)</h2>
+          <div class="grid galeria">
+            <img src="./assets/images/j1.jpg" alt="Imagen 1" />
+            <img src="./assets/images/j2.jpg" alt="Imagen 2" />
+            <img src="./assets/images/j3.jpg" alt="Imagen 3" />
+          </div>
+        </div>
+
+      <section id="galeria-vertical" class="section alt">
+        <div class="container">
+          <h2>Galería Vertical (scroll suave)</h2>
+          <div class="vertical galeria">
+            <img src="./assets/images/j3.jpg" alt="Imagen 3" />
+            <img src="./assets/images/j4.jpg" alt="Imagen 4" />
+            <img src="./assets/images/j5.jpeg" alt="Imagen 5" />
+          </div>
+        </div>
+      </section>
+
+
+      <section id="galeria-abanico" class="section">
+        <div class="abanico galeria">
+          <figure class="card"><img src="./assets/images/j1.jpg"><figcaption>Abanico 1</figcaption></figure>
+          <figure class="card"><img src="./assets/images/j2.jpg"><figcaption>Abanico 2</figcaption></figure>
+        </div>
+      </section>
+
+      <div id="visor" class="visor">
+        <button id="closeVisor">x</button>
+        <button id="prevVisor"><</button>
+        <img id="visorImg" alt="Imagen ampliada" />
+        <button id="nextVisor">></button>
+        </div>
+
+        <footer class="site-footer">
+          <p>©<span id="year"></span> Practica Fotografica - Angel Amador Ayala</p>
+        </footer>
+  </body>
+</html>
