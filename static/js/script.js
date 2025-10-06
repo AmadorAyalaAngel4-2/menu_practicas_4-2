@@ -6,8 +6,8 @@ function mostrarTareas(mes) {
     ],
     octubre: [
       {
-        texto: "HTML - CSS - JS - Multiples Imagenes",
-        url: "https://misitio.com/ej-3",
+        texto: "Practica fotografias varios - Amador Ayala",
+        url: "../static/imagenes.html",
       },
       {
         texto: "HTML - CSS - JS - Combinacion de Objetos",
