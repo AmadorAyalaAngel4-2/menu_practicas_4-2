@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amador Ayala - Examen</title>
+    <link rel="stylesheet" href="./css/examen_styles.css" />
+    <script src="./js/examen_script.js" defer></script>
+  </head>
+  <body>
+    <h1>Bienvenido a Juegos Infantiles</h1>
+    <p>
+      Disenamos y construimos juegos y mobiliario para espacios publicos y
+      privados
+    </p>
+
+    <header>
+      <div class="nav">
+        <div class="brand">Juegos Infantiles</div>
+        <button
+          class="menu-toggle"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="inicio">
+      <h1>BIENVENIDO a Juegos Infantiles</h1>
+      <p>
+        Diseñamos y construimos juegos y mobiliario para espacios públicos y
+        privados.
+      </p>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="./assets/images/j1.jpg" alt="Juego Infantil" />
+          <h3>Juegos Clásicos</h3>
+          <p>Estructuras recreativas seguras y divertidas.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/images/j2.jpg" alt="Mobiliario Urbano" />
+          <h3>Mobiliario Urbano</h3>
+          <p>Bancas, mesas y áreas de descanso para parques.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/images/j3.jpg" alt="Juegos Inclusivos" />
+          <h3>Juegos Inclusivos</h3>
+          <p>Diseñados para todas las edades y capacidades.</p>
+        </div>
+
+        <div class="card">
+          <img src="./assets/images/ev1.png" alt="Evidencia 1" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev2.png" alt="Evidencia 2" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev3.png" alt="Evidencia 3" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev4.png" alt="Evidencia 4" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev5.png" alt="Evidencia 5" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev6.png" alt="Evidencia 6" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev7.png" alt="Evidencia 7" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev8.png" alt="Evidencia 8" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev9.png" alt="Evidencia 9" />
+        </div>
+        <div class="card">
+          <img src="./assets/images/ev10.png" alt="Evidencia 10" />
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="./assets/images/j4.jpg" alt="Parque" />
+          <h3>Parque Residencial</h3>
+        </div>
+        <div class="card">
+          <img src="./assets/images/j5.jpeg" alt="Colegio" />
+          <h3>Colegio Infantil</h3>
+        </div>
+        <div class="card">
+          <img src="./assets/images/j6.jpg" alt="Restaurante" />
+          <h3>Área de Restaurante</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <h2>La voz de nuestros clientes</h2>
+      <p>Experiencias reales de escuelas, residenciales y particulares</p>
+      <div class="testimonios-grid">
+        <div class="testimonio">
+          <video controls>
+            <source src="./assets/videos/v1.mp4" type="video/mp4" />
+          </video>
+          <p>"El parque quedó increíble, instalación rápida y profesional."</p>
+          <strong>- Comité vecinal</strong>
+        </div>
+        <div class="testimonio">
+          <video controls>
+            <source src="./assets/videos/v2.mp4" type="video/mp4" />
+          </video>
+          <p>"Excelente atención, servicio y diseño impecable."</p>
+          <strong>- Cliente particular</strong>
+        </div>
+        <div class="testimonio">
+          <video controls>
+            <source src="./assets/videos/v3.mp4" type="video/mp4" />
+          </video>
+          <p>"Nos acompañaron en todo el proceso, resultado impecable."</p>
+          <strong>- Cliente residencial</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Envíanos un mensaje y te responderemos lo antes posible.</p>
+      <form
+        onsubmit="event.preventDefault(); alert('¡Gracias por contactarnos!');"
+        class="form-contacto"
+      >
+        <input type="text" placeholder="Tu nombre completo" required />
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <textarea
+          placeholder="Escribe tu mensaje aquí..."
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">➤ Enviar Mensaje</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        © <span id="year"></span> Juegos Infantiles - Todos los derechos
+        reservados
+      </p>
+    </footer>
+  </body>
+
+  <audio id="bg-music" src="./assets/audios/2.mp3" loop autoplay muted></audio>
+
+  <div class="audio-control">
+    <button id="toggleAudio">🔇 Activar sonido</button>
+  </div>
+</html>

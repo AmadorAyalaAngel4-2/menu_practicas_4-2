@@ -10,8 +10,8 @@ function mostrarTareas(mes) {
         url: "../static/imagenes.html",
       },
       {
-        texto: "HTML - CSS - JS - Combinacion de Objetos",
-        url: "https://misitio.com/ej-4",
+        texto: "Practica General Examen - Amador Ayala",
+        url: "../static/examen.html",
       },
     ],
     noviembre: [
