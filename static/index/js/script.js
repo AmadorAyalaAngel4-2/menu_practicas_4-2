@@ -1,17 +1,21 @@
 function mostrarTareas(mes) {
   const tareas = {
     septiembre: [
-      { texto: "HTML - CSS - JS - Audio", url: "../static/audio.html" },
-      { texto: "HTML - CSS - JS - Video", url: "../static/video.html" },
+      { texto: "HTML - CSS - JS - Audio", url: "../audio/audio.html" },
+      { texto: "HTML - CSS - JS - Video", url: "../video/video.html" },
     ],
     octubre: [
       {
         texto: "Practica fotografias varios - Amador Ayala",
-        url: "../static/imagenes.html",
+        url: "../imagenes/imagenes.html",
       },
       {
         texto: "Practica General Examen - Amador Ayala",
-        url: "../static/examen.html",
+        url: "../imagenes/examen.html",
+      },
+      {
+        texto: "Examen U2 - Amador Ayala",
+        url: "../imagenes/examen.html",
       },
     ],
     noviembre: [
