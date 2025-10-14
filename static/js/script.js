@@ -15,7 +15,7 @@ function mostrarTareas(mes) {
       },
       {
         texto: "examen U2 - Amador Ayala",
-        url: "../static/examen U2 Amador Ayala Frontend/negocio.html",
+        url: "../static/examen_U2_Amador_Ayala_Frontend/negocio.html",
       },
     ],
     noviembre: [
