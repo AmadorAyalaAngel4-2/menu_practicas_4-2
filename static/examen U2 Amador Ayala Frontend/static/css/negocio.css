@@ -1,0 +1,384 @@
+/* ========= VARIABLES & RESET ========= */ /* Título de la sección: Variables y Reinicio de Estilos */
+:root { /* Selector para el elemento raíz (<html>), define variables CSS */
+  --maxw: 1200px; /* Variable para el ancho máximo del contenido principal */
+  --padx: clamp(12px, 5vw, 32px); /* Variable para el padding horizontal responsivo (mín: 12px, pref: 5% del ancho de la vista, máx: 32px) */
+  --bg: #f7f8fa; /* Variable para el color de fondo principal (gris muy claro) */
+  --ink: #222; /* Variable para el color principal del texto (negro casi puro) */
+  --muted: #6b7280; /* Variable para el color del texto secundario o "apagado" (gris medio) */
+  --brand: #2c3e50; /* Variable para el color de la marca principal (azul oscuro/grisáceo) */
+  --brand-2: #16a085; /* Variable para el color de la marca secundaria/acento (verde azulado) */
+  --card: #ffffff; /* Variable para el color de fondo de las tarjetas (blanco puro) */
+  --shadow: 0 6px 18px rgba(0, 0, 0, .08); /* Variable para una sombra de caja estándar (desplazamiento x 0, y 6px, difuminado 18px, color negro con 8% de opacidad) */
+} /* Cierre del bloque de variables CSS en :root */
+
+* { box-sizing: border-box; } /* Selector universal (*), establece el modelo de caja border-box para todos los elementos (padding y border no aumentan el ancho/alto total) */
+html, body { margin: 0; padding: 0; } /* Reinicia los márgenes y paddings predeterminados de <html> y <body> a 0 */
+
+body { /* Estilos aplicados al cuerpo del documento */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; /* Define una pila de fuentes modernas y sin serifa */
+  color: var(--ink); /* Aplica el color de texto definido en la variable --ink */
+  background: var(--bg); /* Aplica el color de fondo definido en la variable --bg */
+  line-height: 1.5; /* Establece la altura de línea a 1.5 veces el tamaño de la fuente */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal para prevenir barras de desplazamiento laterales */
+} /* Cierre de los estilos para body */
+
+/* ========= HEADER ========= */ /* Título de la sección: Encabezado */
+header { /* Estilos para el elemento <header> */
+  position: fixed; /* Posiciona el encabezado de forma fija en la ventana de visualización */
+  top: 0; /* Lo fija en la parte superior (0 píxeles desde arriba) */
+  left: 0; /* Lo fija en la parte izquierda (0 píxeles desde la izquierda) */
+  width: 100%; /* Ocupa el 100% del ancho del viewport */
+  background: #111; /* Color de fondo del encabezado (negro muy oscuro) */
+  color: #fff; /* Color del texto dentro del encabezado (blanco) */
+  z-index: 1000; /* Alto índice z para asegurar que esté por encima de la mayoría de los demás elementos */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25); /* Añade una ligera sombra en la parte inferior del encabezado */
+} /* Cierre de los estilos para header */
+header .nav { /* Estilos para el elemento con clase .nav dentro de <header> (contenedor de navegación) */
+  max-width: var(--maxw); /* Limita el ancho máximo al valor de la variable --maxw */
+  margin: 0 auto; /* Centra el contenedor horizontalmente (margen superior/inferior 0, auto en los lados) */
+  padding: 14px var(--padx); /* Padding superior/inferior de 14px, y padding lateral según la variable --padx */
+  display: flex; /* Habilita el modelo de caja flexible (flexbox) */
+  align-items: center; /* Alinea los elementos hijos verticalmente al centro */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos hijos (logo a un lado, menú al otro) */
+} /* Cierre de los estilos para header .nav */
+.brand { font-weight: 700; font-size: clamp(1.05rem,2vw,1.4rem); } /* Estilos para el logo o nombre de la marca: negrita y tamaño de fuente responsivo */
+.menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; } /* Estilos para la lista de navegación: quita viñetas, márgenes/paddings, usa flexbox, y un espacio (gap) de 12px entre ítems */
+.menu a { /* Estilos para los enlaces (<a>) dentro del menú */
+  color: #fff; /* Color del texto del enlace (blanco) */
+  text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+  padding: 8px 12px; /* Padding interno para el área de clic */
+  border-radius: 6px; /* Bordes ligeramente redondeados */
+} /* Cierre de los estilos para .menu a */
+.menu a:hover { background: #333; } /* Estilo al pasar el ratón: cambia el fondo a un gris oscuro */
+.menu-toggle { /* Estilos para el botón de alternar el menú en dispositivos móviles */
+  display: none; /* Inicialmente oculto en vistas de escritorio */
+  background: none; /* Sin color de fondo */
+  border: none; /* Sin borde */
+  color: #fff; /* Color del ícono/texto (blanco) */
+  font-size: 22px; /* Tamaño del ícono */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+} /* Cierre de los estilos para .menu-toggle */
+
+/* ========= LAYOUT UTILS ========= */ /* Título de la sección: Utilidades de Diseño */
+body::before { content: ""; display: block; height: 70px; } /* Pseudoelemento antes del body: crea un espacio de 70px en la parte superior para compensar el header fijo */
+section { padding: clamp(28px, 6vw, 64px) var(--padx); } /* Padding vertical responsivo para todas las secciones, padding horizontal según --padx */
+.container { max-width: var(--maxw); margin: 0 auto; width: 100%; } /* Contenedor de ancho limitado y centrado (ancho máximo según --maxw) */
+.strip { background: #fff; } /* Estilo para una sección con fondo blanco */
+
+/* ========= HERO (corregido) ========= */ /* Título de la sección: Área Principal (Hero) */
+.hero { /* Estilos para la sección Hero */
+  background-color: #0b1220; /* Color de fondo base (azul muy oscuro) */
+  background-image: linear-gradient(180deg, #0b1220 0%, #0b1220 85%, transparent 100%), /* Degradado de color que va de opaco a transparente */
+                    url('../assets/images/texture.jpg'); /* Imagen de fondo añadida */
+  background-position: center; /* Centra la imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el elemento */
+  color: #fff; /* Color del texto (blanco) */
+  position: relative; /* Establece un contexto de posicionamiento */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+} /* Cierre de los estilos para .hero */
+
+.hero-wrap { /* Contenedor interno del Hero para estructurar el contenido */
+  display: grid; /* Habilita el modelo de caja de rejilla (CSS Grid) */
+  grid-template-columns: 1fr 1fr; /* Divide el contenedor en dos columnas de igual ancho (1 fracción cada una) */
+  gap: 24px; /* Espacio (gap) de 24px entre las celdas de la rejilla */
+  align-items: center; /* Alinea los ítems de la rejilla verticalmente al centro */
+  padding-top: 2rem; /* Padding superior de 2 veces el tamaño de fuente base */
+  padding-bottom: 2rem; /* Padding inferior de 2 veces el tamaño de fuente base */
+} /* Cierre de los estilos para .hero-wrap */
+
+.hero-text { /* Contenedor del texto dentro del Hero */
+  background: rgba(11, 18, 32, 0.85); /* Fondo semitransparente (azul muy oscuro con 85% de opacidad) */
+  padding: 1rem 1.5rem; /* Padding interno */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Sombra suave */
+} /* Cierre de los estilos para .hero-text */
+
+.hero-text h1 { /* Estilos para el encabezado principal dentro del Hero */
+  margin: 0 0 12px; /* Margen inferior de 12px, sin márgenes superiores o laterales */
+  font-size: clamp(1.6rem, 2.4vw + 1rem, 2.5rem); /* Tamaño de fuente responsivo complejo (mín: 1.6rem, pref: 2.4% del ancho de vista + 1rem, máx: 2.5rem) */
+  color: #fff; /* Color del texto (blanco) */
+} /* Cierre de los estilos para .hero-text h1 */
+
+.hero-text p { /* Estilos para el párrafo de texto dentro del Hero */
+  color: #e5e7eb; /* Color de texto gris muy claro */
+  margin: 0 0 18px; /* Margen inferior de 18px */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  line-height: 1.5; /* Altura de línea estándar */
+} /* Cierre de los estilos para .hero-text p */
+
+.btn-cta { /* Estilos para el botón de llamada a la acción (Call to Action) */
+  display: inline-block; /* Muestra como bloque en línea para aplicar padding y ancho */
+  background: var(--brand-2); /* Fondo con el color de acento (verde azulado) */
+  color: #fff; /* Color del texto (blanco) */
+  padding: 12px 16px; /* Padding interno */
+  border-radius: 10px; /* Bordes redondeados */
+  text-decoration: none; /* Quita el subrayado */
+  box-shadow: var(--shadow); /* Aplica la sombra estándar */
+} /* Cierre de los estilos para .btn-cta */
+
+.hero-media img { /* Estilos para la imagen dentro del contenedor de medios del Hero */
+  width: 100%; /* Ocupa el 100% del ancho de su contenedor */
+  height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+  max-height: 400px; /* Altura máxima de 400px */
+  aspect-ratio: 4 / 3; /* Proporción de aspecto de 4:3 (ancho:alto) */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: var(--shadow); /* Aplica la sombra estándar */
+} /* Cierre de los estilos para .hero-media img */
+
+/* HERO - versión móvil */ /* Comentario: Media query para el Hero en pantallas medianas */
+@media (max-width: 900px) { /* Media query que aplica estilos cuando el ancho de la vista es de 900px o menos */
+  .hero-wrap { /* Reajuste del contenedor interno del Hero */
+    grid-template-columns: 1fr; /* Cambia a una sola columna (el texto y la imagen se apilan) */
+    text-align: center; /* Centra el texto dentro del contenedor */
+  } /* Cierre de los estilos para .hero-wrap en móvil */
+  .hero-media img { /* Reajuste de la imagen del Hero */
+    max-height: 320px; /* Reduce la altura máxima a 320px */
+    aspect-ratio: 3 / 2; /* Cambia la proporción de aspecto a 3:2 */
+  } /* Cierre de los estilos para .hero-media img en móvil */
+} /* Cierre de la media query */
+
+/* ========= IMÁGENES GENERALES ========= */ /* Título de la sección: Estilos Generales de Imágenes */
+img { /* Estilos aplicados a todos los elementos <img> */
+  max-width: 100%; /* El ancho máximo es el 100% de su contenedor */
+  height: auto; /* La altura se ajusta automáticamente */
+  display: block; /* Muestra la imagen como un elemento de bloque */
+  object-fit: cover; /* Asegura que la imagen cubra el área (aunque para img no afecta a menos que se defina ancho/alto explícito) */
+  border-radius: 12px; /* Bordes redondeados estándar */
+} /* Cierre de los estilos para img */
+
+/* ========= GRIDS & CARDS ========= */ /* Título de la sección: Rejillas y Tarjetas */
+.grid { display: grid; gap: clamp(12px, 3vw, 28px); } /* Estilos para contenedores de rejilla: habilita grid, y gap responsivo */
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } /* Rejilla con 2 columnas (o más, ajustándose) de mínimo 280px */
+.grid.three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } /* Rejilla con 3 columnas (o más, ajustándose) de mínimo 220px */
+
+.card { /* Estilos para el componente Tarjeta */
+  background: var(--card); /* Fondo blanco (variable --card) */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 16px; /* Padding interno */
+  box-shadow: var(--shadow); /* Sombra estándar */
+} /* Cierre de los estilos para .card */
+.card img { /* Estilos para la imagen dentro de la tarjeta */
+  width: 100%; /* 100% del ancho de su contenedor */
+  aspect-ratio: 4 / 3; /* Proporción 4:3 */
+  object-fit: cover; /* Cubre el área */
+  border-radius: 10px; /* Bordes redondeados (ligeramente menos que la tarjeta) */
+  transition: transform 0.3s ease; /* Transición suave para la propiedad 'transform' al pasar el ratón */
+} /* Cierre de los estilos para .card img */
+.card img:hover { transform: scale(1.03); } /* Efecto al pasar el ratón: agranda ligeramente la imagen (zoom sutil) */
+
+/* ========= BENEFITS ========= */ /* Título de la sección: Beneficios */
+.benefit h3 { margin: .2rem 0 .3rem; } /* Reduce los márgenes verticales para encabezados de beneficio */
+.bullets { margin: .5rem 0 0; padding-left: 1.1rem; color: var(--muted); } /* Estilos para listas de viñetas: margen superior, padding izquierdo para las viñetas, color de texto atenuado */
+
+/* ========= PRICES ========= */ /* Título de la sección: Precios */
+.price { text-align: center; } /* Centra el texto de los elementos de precio */
+.price .amount { /* Estilos para el monto/valor del precio */
+  font-size: clamp(1.3rem, 1.2vw + 1rem, 1.8rem); /* Tamaño de fuente responsivo para el monto */
+  font-weight: 700; /* Negrita */
+  margin: .2rem 0 .6rem; /* Márgenes verticales */
+} /* Cierre de los estilos para .price .amount */
+.price.featured { outline: 2px solid var(--brand-2); } /* Agrega un contorno de 2px con color de acento para el precio destacado */
+
+/* ========= VIDEO DEMO ========= */ /* Título de la sección: Demostración de Video */
+.video-wrap { /* Contenedor del video */
+  max-width: 720px; /* Ancho máximo de 720px */
+  margin: 0 auto; /* Centrado horizontal */
+  border-radius: 16px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta partes del video que se desborden (importante para el border-radius) */
+  box-shadow: var(--shadow); /* Sombra estándar */
+} /* Cierre de los estilos para .video-wrap */
+video { /* Estilos para el elemento <video> */
+  width: 100%; /* 100% del ancho de su contenedor */
+  height: auto; /* Altura ajustada automáticamente */
+  aspect-ratio: 16 / 9; /* Proporción de cine 16:9 */
+  object-fit: cover; /* Cubre el área */
+  display: block; /* Muestra como bloque */
+  border-radius: 12px; /* Bordes redondeados (posiblemente redundante si el wrap tiene overflow:hidden) */
+} /* Cierre de los estilos para video */
+
+/* ========= GALERÍA CON MODAL ========= */ /* Título de la sección: Galería */
+.gallery { /* Contenedor de la galería */
+  display: grid; /* Habilita CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Rejilla de columnas de mínimo 220px de ancho */
+  gap: 16px; /* Espacio de 16px entre las imágenes */
+} /* Cierre de los estilos para .gallery */
+.gallery img { /* Estilos para las imágenes de la galería */
+  width: 100%; /* 100% del ancho de la columna */
+  aspect-ratio: 4 / 3; /* Proporción 4:3 */
+  object-fit: cover; /* Cubre el área */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: zoom-in; /* Cursor de "zoom" para indicar que se puede ampliar */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para hover */
+} /* Cierre de los estilos para .gallery img */
+.gallery img:hover { /* Efecto al pasar el ratón */
+  transform: scale(1.05); /* Ligeramente más grande */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada */
+} /* Cierre del estilo hover */
+
+/* ========= MODAL ========= */ /* Título de la sección: Modal */
+.modal { /* Contenedor del modal (ventana emergente) */
+  position: fixed; /* Posicionamiento fijo al viewport */
+  inset: 0; /* Ocupa todo el viewport (top:0, right:0, bottom:0, left:0) */
+  display: none; /* Inicialmente oculto */
+  place-items: center; /* Centra el contenido horizontal y verticalmente (shorthand para align-items y justify-items) */
+  background: rgba(0, 0, 0, .75); /* Fondo negro semitransparente (75% opacidad) */
+  padding: 20px; /* Padding interno */
+  z-index: 1500; /* Alto z-index para estar sobre todo */
+} /* Cierre de los estilos para .modal */
+.modal.open { display: grid; } /* Muestra el modal cuando tiene la clase .open, usando grid para centrar */
+.modal img { /* Imagen dentro del modal */
+  max-width: min(1100px, 95vw); /* Ancho máximo de 1100px o 95% del viewport (el menor) */
+  max-height: 80vh; /* Altura máxima del 80% del viewport */
+  border-radius: 12px; /* Bordes redondeados */
+} /* Cierre de los estilos para .modal img */
+.modal p { color: #fff; margin-top: 10px; text-align: center; } /* Estilos para el texto opcional dentro del modal: blanco, margen superior, centrado */
+.modal-close { /* Botón de cierre del modal */
+  position: absolute; /* Posicionamiento absoluto dentro del modal */
+  top: 18px; /* 18px desde arriba */
+  right: 18px; /* 18px desde la derecha */
+  background: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  border: 1px solid #fff; /* Borde blanco de 1px */
+  border-radius: 999px; /* Borde muy redondeado (círculo) */
+  padding: 6px 10px; /* Padding interno */
+  cursor: pointer; /* Cursor de puntero */
+} /* Cierre de los estilos para .modal-close */
+
+/* ========= FORM ========= */ /* Título de la sección: Formulario de Contacto */
+.form-contacto { /* Contenedor del formulario */
+  width: 100%; /* Ancho completo */
+  max-width: 560px; /* Ancho máximo limitado */
+  margin: 0 auto; /* Centrado horizontal */
+  display: flex; /* Habilita flexbox */
+  flex-direction: column; /* Organiza los ítems verticalmente */
+  gap: 12px; /* Espacio de 12px entre los campos */
+} /* Cierre de los estilos para .form-contacto */
+.form-contacto input, /* Estilos para campos de entrada y textarea */
+.form-contacto textarea {
+  width: 100%; /* Ancho completo del contenedor */
+  padding: 12px; /* Padding interno */
+  border: 1px solid #d1d5db; /* Borde gris claro de 1px */
+  border-radius: 10px; /* Bordes redondeados */
+  min-height: 44px; /* Altura mínima para accesibilidad */
+  font-size: 16px; /* Tamaño de fuente para evitar zoom en iOS */
+} /* Cierre de los estilos para inputs y textareas */
+.form-contacto button { /* Estilos para el botón de envío */
+  background: var(--brand); /* Fondo con el color de marca principal */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 12px; /* Padding interno */
+  cursor: pointer; /* Cursor de puntero */
+} /* Cierre de los estilos para .form-contacto button */
+.form-contacto button:hover { background: #1b2733; } /* Efecto al pasar el ratón: color de fondo ligeramente más oscuro */
+
+/* ========= AUDIO BUTTON ========= */ /* Título de la sección: Botón de Control de Audio */
+.audio-control { /* Contenedor del botón de audio (versión inicial, luego corregida abajo) */
+  position: fixed; /* Posicionamiento fijo */
+  right: 20px; /* 20px desde la derecha */
+  bottom: calc(20px + env(safe-area-inset-bottom)); /* 20px desde abajo, más el área segura para dispositivos con muescas/barras (como iPhones) */
+  z-index: 1600; /* Alto z-index */
+} /* Cierre de los estilos para .audio-control (inicial) */
+.audio-control button { /* Estilos para el botón dentro del control de audio */
+  background: var(--brand); /* Fondo con color de marca principal */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 999px; /* Borde muy redondeado (círculo/pastilla) */
+  padding: 10px 14px; /* Padding interno */
+  cursor: pointer; /* Cursor de puntero */
+} /* Cierre de los estilos para .audio-control button */
+.audio-control button[aria-pressed="true"] { background: var(--brand-2); } /* Estilo cuando el atributo aria-pressed es 'true': cambia el fondo al color de acento */
+
+/* ========= RESPONSIVE NAV ========= */ /* Título de la sección: Navegación Responsiva */
+@media (max-width: 768px) { /* Media query que aplica estilos cuando el ancho de la vista es de 768px o menos (típico para tabletas/móviles) */
+  .menu { /* Estilos para la lista de navegación en móvil */
+    position: absolute; /* Posicionamiento absoluto, se ubicará en relación al header */
+    top: 100%; /* Se coloca justo debajo del header */
+    left: 0; /* Extiende desde el borde izquierdo */
+    right: 0; /* Extiende hasta el borde derecho */
+    background: #111; /* Color de fondo negro */
+    display: none; /* Inicialmente oculto */
+    flex-direction: column; /* Los ítems se apilan verticalmente */
+  } /* Cierre de los estilos para .menu en móvil */
+  .menu.active { display: flex; } /* Muestra el menú cuando tiene la clase .active */
+  .menu a { padding: 14px 18px; text-align: center; } /* Aumenta el padding de los enlaces y centra el texto */
+  .menu-toggle { display: block; } /* Muestra el botón de alternar el menú */
+} /* Cierre de la media query */
+
+/* ========= MÓVIL ========= */ /* Título de la sección: Estilos para Móviles Pequeños */
+@media (max-width: 480px) { /* Media query para anchos de vista de 480px o menos */
+  .hero-media img { /* Ajuste de la imagen del Hero */
+    max-height: 280px; /* Reduce la altura máxima */
+    aspect-ratio: 3 / 2; /* Mantiene la proporción 3:2 */
+  } /* Cierre del ajuste de .hero-media img */
+  .gallery img { aspect-ratio: 1 / 1; } /* Cambia las imágenes de la galería a proporción cuadrada (1:1) */
+  .card img { aspect-ratio: 3 / 2; } /* Cambia las imágenes de la tarjeta a proporción 3:2 */
+  .video-wrap { max-width: 95%; } /* Reduce el ancho máximo del contenedor de video */
+  video { aspect-ratio: 4 / 3; } /* Cambia la proporción del video a 4:3 */
+  .audio-control { right: 12px; bottom: 12px; } /* Mueve el botón de audio a 12px de los bordes (luego corregido abajo) */
+} /* Cierre de la media query */
+
+/* ========= FOOTER ========= */ /* Título de la sección: Pie de Página */
+footer { /* Estilos para el pie de página */
+  background: #111; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 24px 0; /* Padding vertical de 24px, sin padding horizontal */
+  margin-top: 36px; /* Margen superior para separarlo del contenido */
+} /* Cierre de los estilos para footer */
+footer p { margin: 0; opacity: .9; font-size: .95rem; } /* Estilos para los párrafos: sin margen, ligera transparencia, fuente ligeramente más pequeña */
+
+/* ====== CORRECCIÓN DE MENÚ MÓVIL ====== */ /* Título de la sección: Corrección Específica para Menú Móvil */
+header { /* Re-estilo del header */
+  position: sticky; /* Cambia de 'fixed' a 'sticky' para permitir que se desplace con la página hasta el borde superior */
+  top: 0; /* Se adhiere al borde superior */
+  z-index: 2000; /* Alto z-index (mayor que el anterior) */
+} /* Cierre del re-estilo del header */
+
+.menu-toggle { /* Re-estilo del botón de alternar */
+  display: block; /* Asegura que esté visible (ya definido en media query, pero se repite para mayor seguridad) */
+  position: relative; /* Posicionamiento relativo */
+  z-index: 3000; /* Asegura que el botón esté *muy* por encima del menú desplegable */
+} /* Cierre del re-estilo de .menu-toggle */
+
+.menu { /* Re-estilo del menú */
+  transition: all 0.3s ease; /* Añade una transición suave a todas las propiedades */
+} /* Cierre del re-estilo de .menu */
+
+.menu.active {
+  display: flex !important; /* Fuerza la visualización del menú activo (importante para anular el display:none en la media query) */
+} /* Cierre del re-estilo de .menu.active */
+
+/* ===== FIX BOTÓN DE AUDIO VISIBLE EN MÓVIL ===== */ /* Título de la sección: Corrección para el Botón de Audio */
+.audio-control { /* Re-estilo del contenedor del botón de audio */
+  position: fixed; /* Posicionamiento fijo */
+  right: 16px; /* 16px desde la derecha */
+  bottom: 16px; /* 16px desde abajo */
+  z-index: 5000;            /* 🔹 Muy por encima de todo: z-index muy alto */
+  pointer-events: auto; /* Asegura que se puedan capturar clics (valor predeterminado, pero se explicita) */
+} /* Cierre del re-estilo de .audio-control */
+
+.audio-control button { /* Re-estilo del botón */
+  background: var(--brand-2); /* Fondo con color de acento (verde azulado) */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 999px; /* Borde muy redondeado (círculo) */
+  padding: 12px 16px; /* Padding interno */
+  font-size: 0.95rem; /* Fuente ligeramente más pequeña */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra de caja más pronunciada */
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para color y tamaño */
+} /* Cierre del re-estilo de .audio-control button */
+
+.audio-control button:hover { /* Efecto al pasar el ratón */
+  background: #1abc9c; /* Color de fondo ligeramente más claro */
+  transform: scale(1.05); /* Agranda ligeramente */
+} /* Cierre del estilo hover */
+
+/* 🔸 En móviles: reduce tamaño pero mantén visible */ /* Comentario: Ajustes para móviles */
+
+@media (max-width:480px){ /* Media query para anchos de vista de 480px o menos */
+  .audio-control { bottom: 90px; right: 12px; } /* Mueve el botón más arriba (90px) y ligeramente más a la izquierda (12px) para evitar la barra de navegación del móvil */
+  .audio-control button { padding:10px 12px; font-size:0.85rem; } /* Reduce el padding y el tamaño de fuente en móviles pequeños */
+} /* Cierre de la media query */

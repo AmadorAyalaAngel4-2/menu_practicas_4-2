@@ -13,6 +13,10 @@ function mostrarTareas(mes) {
         texto: "Practica General Examen - Amador Ayala",
         url: "../static/examen.html",
       },
+      {
+        texto: "examen U2 - Amador Ayala",
+        url: "../static/examen U2 Amador Ayala Frontend/negocio.html",
+      },
     ],
     noviembre: [
       {
