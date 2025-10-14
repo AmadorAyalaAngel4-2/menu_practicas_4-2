@@ -1,218 +1,434 @@
-<!DOCTYPE html> <!-- Declara el tipo de documento HTML5; indica al navegador cómo interpretar el contenido. -->
-<html lang="es"> <!-- Elemento raíz del documento; atributo lang="es" indica que el idioma principal es español. -->
-<head> <!-- Inicio del bloque de cabecera: contiene metadatos, título, enlaces a CSS, etc. -->
-  <meta charset="UTF-8"> <!-- Define la codificación de caracteres (UTF-8) para soportar acentos y caracteres especiales. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Indica al navegador móvil cómo escalar la página; width=device-width hace responsive; initial-scale=1.0 establece zoom inicial. -->
-  <title>Café de Altura – Tu momento perfecto cada mañana</title> <!-- Título de la pestaña/navegador; usado por buscadores y al guardar favoritos. -->
-  <link rel="stylesheet" href="static/css/negocio.css"> <!-- Vincula la hoja de estilos externa ubicada en static/css/negocio.css; rel="stylesheet" define relación como CSS. -->
-</head> <!-- Fin del bloque head; aquí termina la cabecera del documento. -->
+<!DOCTYPE html>
+<!-- Declara el tipo de documento HTML5; indica al navegador cómo interpretar el contenido. -->
+<html lang="es">
+  <!-- Elemento raíz del documento; atributo lang="es" indica que el idioma principal es español. -->
+  <head>
+    <!-- Inicio del bloque de cabecera: contiene metadatos, título, enlaces a CSS, etc. -->
+    <meta charset="UTF-8" />
+    <!-- Define la codificación de caracteres (UTF-8) para soportar acentos y caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Indica al navegador móvil cómo escalar la página; width=device-width hace responsive; initial-scale=1.0 establece zoom inicial. -->
+    <title>Café de Altura – Tu momento perfecto cada mañana</title>
+    <!-- Título de la pestaña/navegador; usado por buscadores y al guardar favoritos. -->
+    <link rel="stylesheet" href="static/css/negocio.css" />
+    <!-- Vincula la hoja de estilos externa ubicada en static/css/negocio.css; rel="stylesheet" define relación como CSS. -->
+  </head>
+  <!-- Fin del bloque head; aquí termina la cabecera del documento. -->
 
-<body> <!-- Inicio del cuerpo visible de la página; todo lo que sigue se renderiza en la ventana del navegador. -->
+  <body>
+    <!-- Inicio del cuerpo visible de la página; todo lo que sigue se renderiza en la ventana del navegador. -->
 
-  <!-- AUDIO TESTIMONIO --> <!-- Comentario HTML: marca la sección de audio testimonial. -->
-  <audio id="bg-music" src="static/assets/audios/1.mp3" preload="metadata"></audio> <!-- Elemento <audio> con id "bg-music"; src apunta al archivo mp3; preload="metadata" pide descargar sólo metadatos (duración) sin audio completo; etiqueta cerrada en la misma línea. -->
-  <div class="audio-control"> <!-- Contenedor con clase "audio-control" para controles de audio (estilizado vía CSS). -->
-    <button id="toggleAudio" aria-pressed="false">️ Escuchar testimonio</button> <!-- Botón visible con id "toggleAudio"; aria-pressed indica estado accesible (false inicial); texto muestra ícono y acción. -->
-  </div> <!-- Cierre del div .audio-control; agrupa el botón con el elemento <audio>. -->
+    <!-- AUDIO TESTIMONIO -->
+    <!-- Comentario HTML: marca la sección de audio testimonial. -->
+    <audio
+      id="bg-music"
+      src="static/assets/audios/1.mp3"
+      preload="metadata"
+    ></audio>
+    <!-- Elemento <audio> con id "bg-music"; src apunta al archivo mp3; preload="metadata" pide descargar sólo metadatos (duración) sin audio completo; etiqueta cerrada en la misma línea. -->
+    <div class="audio-control">
+      <!-- Contenedor con clase "audio-control" para controles de audio (estilizado vía CSS). -->
+      <button id="toggleAudio" aria-pressed="false">
+        ️ Escuchar testimonio
+      </button>
+      <!-- Botón visible con id "toggleAudio"; aria-pressed indica estado accesible (false inicial); texto muestra ícono y acción. -->
+    </div>
+    <!-- Cierre del div .audio-control; agrupa el botón con el elemento <audio>. -->
 
-  <!-- ENCABEZADO --> <!-- Comentario: sección de encabezado y navegación. -->
-  <header> <!-- Elemento semántico header: contiene la navegación principal y marca el inicio de la cabecera del sitio. -->
-    <div class="nav"> <!-- Div con clase "nav" que agrupa marca, botón de menú y lista de enlaces. -->
-      <div class="brand">Café de Altura</div> <!-- Elemento con la marca/ nombre del negocio; puede usarse para logo o título. -->
-      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button> <!-- Botón para menú hamburguesa; class "menu-toggle"; aria-expanded="false" indica que el menú está cerrado (accesibilidad); aria-label da texto alternativo; contenido visual es el icono ☰. -->
-      <ul class="menu"> <!-- Lista no ordenada con clase "menu" que contiene los enlaces de navegación. -->
-        <li><a href="#inicio">Inicio</a></li> <!-- Elemento de lista con enlace a la sección #inicio (ancla interna). -->
-        <li><a href="#producto">Productos</a></li> <!-- Enlace a la sección #producto. -->
-        <li><a href="#beneficios">Beneficios</a></li> <!-- Enlace a la sección #beneficios. -->
-        <li><a href="#galeria">Galería</a></li> <!-- Enlace a la sección #galeria. -->
-        <li><a href="#testimonios">Testimonios</a></li> <!-- Enlace a la sección #testimonios. -->
-        <li><a href="#video">Video</a></li> <!-- Enlace a la sección #video. -->
-        <li><a href="#precios">Precios</a></li> <!-- Enlace a la sección #precios. -->
-        <li><a href="#contacto">Contacto</a></li> <!-- Enlace a la sección #contacto. -->
-      </ul> <!-- Cierre de la lista .menu; contiene todos los enlaces principales. -->
-    </div> <!-- Cierre del div .nav; agrupa elementos de navegación. -->
-  </header> <!-- Cierre del header; termina la sección de cabecera del sitio. -->
+    <!-- ENCABEZADO -->
+    <!-- Comentario: sección de encabezado y navegación. -->
+    <header>
+      <!-- Elemento semántico header: contiene la navegación principal y marca el inicio de la cabecera del sitio. -->
+      <div class="nav">
+        <!-- Div con clase "nav" que agrupa marca, botón de menú y lista de enlaces. -->
+        <div class="brand">Café de Altura</div>
+        <!-- Elemento con la marca/ nombre del negocio; puede usarse para logo o título. -->
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
+        <!-- Botón para menú hamburguesa; class "menu-toggle"; aria-expanded="false" indica que el menú está cerrado (accesibilidad); aria-label da texto alternativo; contenido visual es el icono ☰. -->
+        <ul class="menu">
+          <!-- Lista no ordenada con clase "menu" que contiene los enlaces de navegación. -->
+          <li><a href="#producto">Producto</a></li>
+          <!-- Enlace a la sección #producto. -->
+          <li><a href="#beneficios">Beneficios</a></li>
+          <!-- Enlace a la sección #beneficios. -->
+          <li><a href="#galeria">Galería</a></li>
+          <!-- Enlace a la sección #galeria. -->
+          <li><a href="#video">Video demo</a></li>
+          <!-- Enlace a la sección #video. -->
+          <li><a href="#precios">Precios</a></li>
+          <!-- Enlace a la sección #precios. -->
+          <li><a href="#faq">FAQ</a></li>
+          <!-- Enlace a la sección #testimonios. -->
+          <li><a href="#contacto">Contacto</a></li>
+          <!-- Enlace a la sección #contacto. -->
+        </ul>
+        <!-- Cierre de la lista .menu; contiene todos los enlaces principales. -->
+      </div>
+      <!-- Cierre del div .nav; agrupa elementos de navegación. -->
+    </header>
+    <!-- Cierre del header; termina la sección de cabecera del sitio. -->
 
-  <!-- HERO --> <!-- Comentario: sección hero con imagen y texto destacado. -->
-  <section id="inicio" class="hero"> <!-- Sección semántica con id "inicio" y clase "hero": objetivo es la primera vista principal (hero). -->
-    <div class="container hero-wrap"> <!-- Contenedor con clases para layout (.container para ancho y .hero-wrap para estilo específico). -->
-      <div class="hero-media"> <!-- Bloque para contenido multimedia del hero (imagen). -->
-        <img src="static/assets/images/cafe-bolsa.jpg" alt="Bolsa de café artesanal sobre fondo rústico"> <!-- Imagen del hero; src ruta relativa; alt texto alternativo descriptivo para accesibilidad y SEO. -->
-      </div> <!-- Cierre del div .hero-media; contiene la imagen. -->
-      <div class="hero-text"> <!-- Bloque de texto del hero (título, párrafo, CTA). -->
-        <h1>Café de Altura: calidad, aroma y pasión</h1> <!-- Encabezado principal (H1) que comunica el mensaje central; importante para SEO. -->
-        <p>De las montañas a tu mesa: disfruta nuestro café 100% mexicano, tostado con dedicación.</p> <!-- Párrafo descriptivo que amplía la propuesta de valor. -->
-        <a class="btn-cta" href="#galeria">Ver galería</a> <!-- Enlace con clase "btn-cta" (estilizado como botón) que hace scroll o salta a la sección #galeria. -->
-      </div> <!-- Cierre del div .hero-text; finaliza el contenido textual del hero. -->
-    </div> <!-- Cierre del div .container.hero-wrap; contenedor del hero. -->
-  </section> <!-- Cierre de la sección #inicio.hero; fin del hero principal. -->
+    <!-- HERO -->
+    <!-- Comentario: sección hero con imagen y texto destacado. -->
+    <section id="inicio" class="hero">
+      <!-- Sección semántica con id "inicio" y clase "hero": objetivo es la primera vista principal (hero). -->
+      <div class="container hero-wrap">
+        <!-- Contenedor con clases para layout (.container para ancho y .hero-wrap para estilo específico). -->
+        <div class="hero-text">
+          <!-- Bloque de texto del hero (título, párrafo, CTA). -->
+          <h1>Café de Altura, tu taza perfecta cada mañana</h1>
+          <!-- Encabezado principal (H1) que comunica el mensaje central; importante para SEO. -->
+          <p>
+            Grano arábica seleccionado, tostado medio, notas a cacao y caramelo.
+            Envios a todo el país.
+          </p>
+          <!-- Párrafo descriptivo que amplía la propuesta de valor. -->
+          <a class="btn-cta" href="#precios">Comprar ahora</a>
+          <!-- Enlace con clase "btn-cta" (estilizado como botón) que hace scroll o salta a la sección #galeria. -->
+        </div>
+        <!-- Cierre del div .hero-text; finaliza el contenido textual del hero. -->
+        <div class="hero-media">
+          <!-- Bloque para contenido multimedia del hero (imagen). -->
+          <img
+            src="static/assets/images/cafe-hero.jpg"
+            alt="Bolsa de café artesanal sobre fondo rústico"
+          />
+          <!-- Imagen del hero; src ruta relativa; alt texto alternativo descriptivo para accesibilidad y SEO. -->
+        </div>
+        <!-- Cierre del div .hero-media; contiene la imagen. -->
+      </div>
+      <!-- Cierre del div .container.hero-wrap; contenedor del hero. -->
+    </section>
+    <!-- Cierre de la sección #inicio.hero; fin del hero principal. -->
 
-  <!-- PRODUCTOS --> <!-- Comentario: sección donde se muestran productos. -->
-  <section id="producto"> <!-- Sección con id "producto" para anclar y estilizar los productos. -->
-    <div class="container"> <!-- Contenedor general para controlar ancho y centrado. -->
-      <h2>Nuestros productos</h2> <!-- Título de nivel 2 para la sección (importante para jerarquía semántica). -->
-      <div class="grid two"> <!-- Contenedor con grid de dos columnas (clase "grid two" sugiere estilos CSS que lo organizan en 2 columnas). -->
-        <div class="card"> <!-- Tarjeta de producto; clase "card" usada para consistencia visual. -->
-          <img src="static/assets/images/cafe-grano.jpg" alt="Granos de café arábica tostados"> <!-- Imagen del producto; alt descriptivo. -->
-          <h3>Café Arábica Selecto</h3> <!-- Título de producto (H3). -->
-          <p>Grano entero o molido, tostado medio con notas a cacao y caramelo. Perfecto para espresso o filtrado.</p> <!-- Descripción corta del producto. -->
-        </div> <!-- Cierre del div .card (primer producto). -->
-        <div class="card"> <!-- Segunda tarjeta de producto. -->
-          <img src="static/assets/images/cafe-hero.jpg" alt="Taza de café en mesa de madera"> <!-- Imagen del segundo producto o presentación. -->
-          <h3>Blend Sierra 500g</h3> <!-- Título del segundo producto. -->
-          <p>Tueste fresco, molienda personalizada y empaque con válvula para conservar su aroma natural.</p> <!-- Descripción del producto. -->
-          <ul class="bullets"> <!-- Lista de viñetas (clase bullets) para detalles rápidos. -->
-            <li>Origen único 1,800 msnm</li> <!-- Item: indica altitud de cultivo (1,800 metros sobre el nivel del mar). -->
-            <li>Tueste artesanal</li> <!-- Item: proceso de tueste. -->
-            <li>Envío nacional</li> <!-- Item: cobertura de envío. -->
-          </ul> <!-- Cierre de la lista .bullets. -->
-        </div> <!-- Cierre del div .card (segundo producto). -->
-      </div> <!-- Cierre del div .grid.two; agrupa las tarjetas de producto. -->
-    </div> <!-- Cierre del div .container de la sección producto. -->
-  </section> <!-- Cierre de la sección #producto. -->
+    <!-- PRODUCTOS -->
+    <!-- Comentario: sección donde se muestran productos. -->
+    <section id="producto">
+      <!-- Sección con id "producto" para anclar y estilizar los productos. -->
+      <div class="container">
+        <!-- Contenedor general para controlar ancho y centrado. -->
+        <h2>Producto</h2>
+        <!-- Título de nivel 2 para la sección (importante para jerarquía semántica). -->
+        <div class="grid two">
+          <!-- Contenedor con grid de dos columnas (clase "grid two" sugiere estilos CSS que lo organizan en 2 columnas). -->
+          <div class="card">
+            <!-- Tarjeta de producto; clase "card" usada para consistencia visual. -->
+            <img
+              src="static/assets/images/cafe-bolsa.jpg"
+              alt="Granos de café arábica tostados"
+            />
+            <!-- Imagen del producto; alt descriptivo. -->
+            <h3>Blend Sierra 500g</h3>
+            <!-- Título de producto (H3). -->
+            <p>
+              Tostado medio. Molienda a elección. Cosecha 2025. Perfil
+              balanceado para espresso y filtrados.
+            </p>
+            <ul class="bullets">
+              <!-- Lista de viñetas (clase bullets) para detalles rápidos. -->
+              <li>Origen único, 1,600 - 1,800 msnm</li>
+              <!-- Item: indica altitud de cultivo (1,800 metros sobre el nivel del mar). -->
+              <li>Notas: cacao, caramelo, nuez</li>
+              <!-- Item: proceso de tueste. -->
+              <li>Tueste semanal bajo pedido</li>
+              <!-- Item: cobertura de envío. -->
+            </ul>
+            <!-- Descripción corta del producto. -->
+          </div>
+          <!-- Cierre del div .card (primer producto). -->
+          <div class="card">
+            <!-- Segunda tarjeta de producto. -->
+            <img
+              src="static/assets/images/cafe-grano.jpg"
+              alt="Taza de café en mesa de madera"
+            />
+            <!-- Imagen del segundo producto o presentación. -->
+            <h3>Presentaciones</h3>
+            <!-- Título del segundo producto. -->
+            <p>
+              Grano entero o molido (espresso, V60, prensa). Empaque con válvula
+              unidireccional.
+            </p>
+            <a href="#precios">Ver precios</a>
+          </div>
+          <!-- Cierre del div .card (segundo producto). -->
+        </div>
+        <!-- Cierre del div .grid.two; agrupa las tarjetas de producto. -->
+      </div>
+      <!-- Cierre del div .container de la sección producto. -->
+    </section>
+    <!-- Cierre de la sección #producto. -->
 
-  <!-- BENEFICIOS --> <!-- Comentario: sección que enumera ventajas/beneficios. -->
-  <section id="beneficios" class="strip"> <!-- Sección con id "beneficios" y clase "strip" (strip suele indicar banda de color o estilo de banda horizontal). -->
-    <div class="container"> <!-- Contenedor para alinear y limitar ancho. -->
-      <h2>Ventajas de elegir Café de Altura</h2> <!-- Título de la sección beneficios. -->
-      <div class="grid three"> <!-- Grid con tres columnas (clase "three" sugiere 3 columnas en CSS). -->
-        <div class="benefit"> <!-- Bloque de beneficio individual. -->
-          <h3>Tueste reciente</h3> <!-- Nombre del beneficio. -->
-          <p>Tu café se tuesta cada semana, justo antes del envío.</p> <!-- Explicación del beneficio (frescura). -->
-        </div> <!-- Cierre del div .benefit (primero). -->
-        <div class="benefit"> <!-- Segundo beneficio. -->
-          <h3>Origen rastreable</h3> <!-- Título del beneficio. -->
-          <p>Cada lote tiene trazabilidad desde la finca hasta tu taza.</p> <!-- Detalle sobre trazabilidad. -->
-        </div> <!-- Cierre del div .benefit (segundo). -->
-        <div class="benefit"> <!-- Tercer beneficio. -->
-          <h3>Apoyo local</h3> <!-- Título del beneficio. -->
-          <p>Trabajamos directamente con pequeños productores de montaña.</p> <!-- Explicación del apoyo a productores locales. -->
-        </div> <!-- Cierre del div .benefit (tercero). -->
-      </div> <!-- Cierre del div .grid.three; agrupa los beneficios en columnas. -->
-    </div> <!-- Cierre del div .container de beneficios. -->
-  </section> <!-- Cierre de la sección #beneficios.strip. -->
+    <!-- BENEFICIOS -->
+    <!-- Comentario: sección que enumera ventajas/beneficios. -->
+    <section id="beneficios" class="strip">
+      <!-- Sección con id "beneficios" y clase "strip" (strip suele indicar banda de color o estilo de banda horizontal). -->
+      <div class="container">
+        <!-- Contenedor para alinear y limitar ancho. -->
+        <h2>Beneficios</h2>
+        <!-- Título de la sección beneficios. -->
+        <div class="grid three">
+          <!-- Grid con tres columnas (clase "three" sugiere 3 columnas en CSS). -->
+          <div class="benefit">
+            <!-- Bloque de beneficio individual. -->
+            <h3>Frescura garantizada</h3>
+            <!-- Nombre del beneficio. -->
+            <p>Tueste y envío en 48-72h para conservar aroma y sabor.</p>
+            <!-- Explicación del beneficio (frescura). -->
+          </div>
+          <!-- Cierre del div .benefit (primero). -->
+          <div class="benefit">
+            <!-- Segundo beneficio. -->
+            <h3>Calidad rastreable</h3>
+            <!-- Título del beneficio. -->
+            <p>
+              Lotes identificados por finca y altitud, con control de humedad.
+            </p>
+            <!-- Detalle sobre trazabilidad. -->
+          </div>
+          <!-- Cierre del div .benefit (segundo). -->
+          <div class="benefit">
+            <!-- Tercer beneficio. -->
+            <h3>Sustentable</h3>
+            <!-- Título del beneficio. -->
+            <p>Compra directa a productores y empaque reciclable.</p>
+            <!-- Explicación del apoyo a productores locales. -->
+          </div>
+          <!-- Cierre del div .benefit (tercero). -->
+        </div>
+        <!-- Cierre del div .grid.three; agrupa los beneficios en columnas. -->
+      </div>
+      <!-- Cierre del div .container de beneficios. -->
+    </section>
+    <!-- Cierre de la sección #beneficios.strip. -->
 
-  <!-- GALERÍA (nuevo orden de fotos) --> <!-- Comentario: galería de imágenes con modal para ampliar. -->
-  <section id="galeria"> <!-- Sección con id "galeria" para las fotos. -->
-    <div class="container"> <!-- Contenedor general. -->
-      <h2>Galería</h2> <!-- Título de la galería. -->
-      <p>Imágenes reales del proceso y los productos.</p> <!-- Texto introductorio. -->
-      <div class="grid gallery"> <!-- Grid con clase "gallery" para layout de imágenes en mosaico. -->
-        <img class="zoomable" src="static/assets/images/g5.jpg" alt="Capuchino con arte latte"> <!-- Imagen 1 con clase "zoomable" (habilita apertura en modal), src y alt descriptivo. -->
-        <img class="zoomable" src="static/assets/images/g1.jpg" alt="Tueste artesanal de café"> <!-- Imagen 2. -->
-        <img class="zoomable" src="static/assets/images/g4.jpg" alt="Método V60 en preparación"> <!-- Imagen 3. -->
-        <img class="zoomable" src="static/assets/images/g2.jpg" alt="Barista preparando espresso"> <!-- Imagen 4. -->
-        <img class="zoomable" src="static/assets/images/g6.jpg" alt="Empaques listos para envío"> <!-- Imagen 5. -->
-        <img class="zoomable" src="static/assets/images/g3.jpg" alt="Granos recién tostados"> <!-- Imagen 6. -->
-        <img class="zoomable" src="static/assets/images/g4.jpg" alt="Filtrado artesanal"> <!-- Imagen 7 (repite g4.jpg pero con alt diferente: podría ser intencional o redundante). -->
-        <img class="zoomable" src="static/assets/images/g1.jpg" alt="Café en granos sobre tela rústica"> <!-- Imagen 8 (repite g1.jpg). -->
-        <img class="zoomable" src="static/assets/images/g5.jpg" alt="Taza servida con arte latte"> <!-- Imagen 9 (repite g5.jpg). -->
-      </div> <!-- Cierre del div .grid.gallery; contiene todas las <img> de la galería. -->
-    </div> <!-- Cierre del div .container de la galería. -->
+    <!-- GALERÍA (nuevo orden de fotos) -->
+    <!-- Comentario: galería de imágenes con modal para ampliar. -->
+    <section id="galeria">
+      <!-- Sección con id "galeria" para las fotos. -->
+      <div class="container">
+        <!-- Contenedor general. -->
+        <h2>Galería</h2>
+        <!-- Título de la galería. -->
+        <p>Imágenes del proceso y del producto final.</p>
+        <!-- Texto introductorio. -->
+        <div class="grid gallery">
+          <img
+            class="zoomable"
+            src="static/assets/images/g1.jpg"
+            alt="Tueste artesanal de café"
+          />
+          <img
+            class="zoomable"
+            src="static/assets/images/g2.jpg"
+            alt="Barista preparando espresso"
+          />
+          <img
+            class="zoomable"
+            src="static/assets/images/g3.jpg"
+            alt="Granos recién tostados"
+          />
+          <img
+            class="zoomable"
+            src="static/assets/images/g4.jpg"
+            alt="Método V60 en preparación"
+          />
+          <img
+            class="zoomable"
+            src="static/assets/images/g5.jpg"
+            alt="Capuchino con arte latte"
+          />
+          <img
+            class="zoomable"
+            src="static/assets/images/g6.jpg"
+            alt="Empaques listos para envío"
+          />
+        </div>
+        <!-- Cierre del div .grid.gallery; contiene todas las <img> de la galería. -->
+      </div>
+      <!-- Cierre del div .container de la galería. -->
 
-    <div id="modal" class="modal" aria-hidden="true" role="dialog"> <!-- Contenedor modal para ampliar imágenes; id "modal"; aria-hidden inicia en true (oculto); role="dialog" indica diálogo accesible. -->
-      <button class="modal-close" aria-label="Cerrar">✖</button> <!-- Botón para cerrar el modal; aria-label accesible "Cerrar". -->
-      <img id="modal-img" src="" alt=""> <!-- Imagen dentro del modal con id "modal-img"; src vacío hasta que JS asigne la imagen seleccionada; alt vacío por defecto (JS llenará caption). -->
-      <p id="modal-caption"></p> <!-- Párrafo con id "modal-caption" donde se colocará el texto alternativo/ caption de la imagen seleccionada. -->
-    </div> <!-- Cierre del div #modal; modal para visualización ampliada. -->
-  </section> <!-- Cierre de la sección #galeria. -->
+      <div id="modal" class="modal" aria-hidden="true" role="dialog">
+        <!-- Contenedor modal para ampliar imágenes; id "modal"; aria-hidden inicia en true (oculto); role="dialog" indica diálogo accesible. -->
+        <button class="modal-close" aria-label="Cerrar">✖</button>
+        <!-- Botón para cerrar el modal; aria-label accesible "Cerrar". -->
+        <img id="modal-img" src="" alt="" />
+        <!-- Imagen dentro del modal con id "modal-img"; src vacío hasta que JS asigne la imagen seleccionada; alt vacío por defecto (JS llenará caption). -->
+        <p id="modal-caption"></p>
+        <!-- Párrafo con id "modal-caption" donde se colocará el texto alternativo/ caption de la imagen seleccionada. -->
+      </div>
+      <!-- Cierre del div #modal; modal para visualización ampliada. -->
+    </section>
+    <!-- Cierre de la sección #galeria. -->
 
-  <!-- TESTIMONIOS --> <!-- Comentario: sección con opiniones de clientes. -->
-  <section id="testimonios" class="strip"> <!-- Sección testimonials con clase strip (estilo de banda). -->
-    <div class="container"> <!-- Contenedor para layout. -->
-      <h2>Lo que opinan nuestros clientes</h2> <!-- Título de la sección. -->
-      <div class="grid three"> <!-- Grid con tres columnas para los testimonios. -->
-        <div class="card"> <!-- Tarjeta de testimonio 1. -->
-          <img src="static/assets/images/g2.jpg" alt="Cliente 1" style="width:90px;height:90px;border-radius:50%;margin:auto;"> <!-- Imagen circular del cliente con estilos inline: width/height 90px, border-radius 50% para círculo, margin auto centra. -->
-          <p>"El sabor y aroma me recordaron al café de mi abuela. Increíble calidad y atención."</p> <!-- Texto testimonial. -->
-          <p><strong>– Fernanda G.</strong></p> <!-- Firma del testimonio con etiqueta <strong> para énfasis. -->
-        </div> <!-- Cierre de la tarjeta testimonial 1. -->
-        <div class="card"> <!-- Tarjeta de testimonio 2. -->
-          <img src="static/assets/images/g3.jpg" alt="Cliente 2" style="width:90px;height:90px;border-radius:50%;margin:auto;"> <!-- Imagen del segundo testimonial con mismos estilos inline. -->
-          <p>"Recibí mi pedido en 2 días, muy bien empacado y con un aroma delicioso."</p> <!-- Texto testimonial 2. -->
-          <p><strong>– Luis Hernández</strong></p> <!-- Firma del testimonio 2. -->
-        </div> <!-- Cierre de la tarjeta testimonial 2. -->
-        <div class="card"> <!-- Tarjeta de testimonio 3. -->
-          <img src="static/assets/images/g6.jpg" alt="Cliente 3" style="width:90px;height:90px;border-radius:50%;margin:auto;"> <!-- Imagen testimonial 3. -->
-          <p>"No cambio este café por nada, el tueste artesanal marca la diferencia."</p> <!-- Texto testimonial 3. -->
-          <p><strong>– Paola Rivera</strong></p> <!-- Firma del testimonio 3. -->
-        </div> <!-- Cierre de la tarjeta testimonial 3. -->
-      </div> <!-- Cierre del div .grid.three que contiene las 3 tarjetas. -->
-    </div> <!-- Cierre del div .container de testimonios. -->
-  </section> <!-- Cierre de la sección #testimonios.strip. -->
+    <!-- VIDEO -->
+    <!-- Comentario: sección con video demostrativo. -->
+    <section id="video" class="strip">
+      <!-- Sección con id "video". -->
+      <div class="container">
+        <!-- Contenedor para centrar el contenido del video. -->
+        <h2>Video demo</h2>
+        <!-- Título de la sección video. -->
+        <p>Preparación en casa con V60 (1 min)</p>
+        <!-- Texto descriptivo del video. -->
+        <div class="video-wrap">
+          <!-- Contenedor que envuelve el elemento <video> para estilo/responsividad. -->
+          <video controls poster="static/assets/images/g20.jpg">
+            <!-- Elemento video con controles (play, pause, timeline); poster es la imagen mostrada antes de reproducir (ruta relativa). -->
+            <source src="static/assets/videos/v1.mp4" type="video/mp4" />
+            <!-- Fuente de video: src a v1.mp4 y type indica MIME type video/mp4; permite múltiples <source> si hay varios formatos. -->
+            Tu navegador no soporta video HTML5.
+            <!-- Texto alternativo mostrado si el navegador no soporta <video>. -->
+          </video>
+          <!-- Cierre del elemento <video>. -->
+        </div>
+        <!-- Cierre del div .video-wrap. -->
+      </div>
+      <!-- Cierre del div .container del video. -->
+    </section>
+    <!-- Cierre de la sección #video. -->
 
-  <!-- VIDEO --> <!-- Comentario: sección con video demostrativo. -->
-  <section id="video"> <!-- Sección con id "video". -->
-    <div class="container"> <!-- Contenedor para centrar el contenido del video. -->
-      <h2>Video demostrativo</h2> <!-- Título de la sección video. -->
-      <p>Desde el grano verde hasta tu taza: conoce nuestro proceso.</p> <!-- Texto descriptivo del video. -->
-      <div class="video-wrap"> <!-- Contenedor que envuelve el elemento <video> para estilo/responsividad. -->
-        <video controls poster="static/assets/images/g20.jpg"> <!-- Elemento video con controles (play, pause, timeline); poster es la imagen mostrada antes de reproducir (ruta relativa). -->
-          <source src="static/assets/videos/v1.mp4" type="video/mp4"> <!-- Fuente de video: src a v1.mp4 y type indica MIME type video/mp4; permite múltiples <source> si hay varios formatos. -->
-          Tu navegador no soporta video HTML5. <!-- Texto alternativo mostrado si el navegador no soporta <video>. -->
-        </video> <!-- Cierre del elemento <video>. -->
-      </div> <!-- Cierre del div .video-wrap. -->
-    </div> <!-- Cierre del div .container del video. -->
-  </section> <!-- Cierre de la sección #video. -->
+    <!-- PRECIOS -->
+    <!-- Comentario: sección con precios y presentaciones. -->
+    <section id="precios">
+      <!-- Sección precios con id y clase "strip" para estilo de banda. -->
+      <div class="container">
+        <!-- Contenedor para restricciones de ancho. -->
+        <h2>Precios</h2>
+        <!-- Título de la sección. -->
+        <div class="grid three">
+          <!-- Grid de tres columnas para mostrar las 3 presentaciones. -->
+          <div class="card price">
+            <!-- Tarjeta de precio; clases "card" y "price" para estilos específicos. -->
+            <h3>250 g</h3>
+            <!-- Encabezado que indica la presentación (1 kilogramo). -->
+            <p class="amount">$149 MXN</p>
+            <!-- Párrafo con clase "amount" que muestra el precio; "$499 MXN" texto visible. -->
+            <ul class="bullets">
+              <!-- Lista de características del paquete 1kg. -->
+              <li>1 paquete</li>
+              <!-- Item descriptivo. -->
+              <li>Tueste reciente</li>
+              <!-- Item descriptivo. -->
+              <li>Grano o molido</li>
+              <!-- Item descriptivo. -->
+            </ul>
+            <!-- Cierre de la lista bullets. -->
+            <a class="btn-cta" href="#contacto">Comprar</a>
+            <!-- Enlace con clase botón que apunta a la sección #contacto para compra/consulta. -->
+          </div>
+          <!-- Cierre del div .card.price (primer precio). -->
+          <div class="card price featured">
+            <!-- Segundo bloque de precio con clase adicional "featured" (destacado visualmente). -->
+            <h3>500 g</h3>
+            <!-- Presentación de 500 gramos. -->
+            <p class="amount">$269 MXN</p>
+            <!-- Precio para la presentación de 500 g. -->
+            <ul class="bullets">
+              <!-- Lista de características del paquete 500 g. -->
+              <li>2x250 g</li>
+              <!-- Item. -->
+              <li>Mejor relación precio</li>
+              <!-- Item. -->
+              <li>Envío con protección</li>
+              <!-- Item: indica que el precio incluye envío. -->
+            </ul>
+            <!-- Cierre de la lista bullets. -->
+            <a class="btn-cta" href="#contacto">Comprar</a>
+            <!-- CTA para comprar que lleva a #contacto. -->
+          </div>
+          <!-- Cierre del div .card.price.featured (segundo precio). -->
+          <div class="card price">
+            <!-- Tercer bloque de precio. -->
+            <h3>1 kg</h3>
+            <!-- Presentación de 250 gramos. -->
+            <p class="amount">$499 MXN</p>
+            <!-- Precio de la presentación de 250 g. -->
+            <ul class="bullets">
+              <!-- Lista con detalles del paquete pequeño. -->
+              <li>Ahorro</li>
+              <!-- Item. -->
+              <li>Para oficinas</li>
+              <!-- Item: opción de presentación. -->
+              <li>Empaque con válvula</li>
+              <!-- Item: ventaja ecológica. -->
+            </ul>
+            <!-- Cierre de la lista bullets. -->
+            <a class="btn-cta" href="#contacto">Comprar</a>
+            <!-- CTA a #contacto para realizar la compra. -->
+          </div>
+          <!-- Cierre del div .card.price (tercer precio). -->
+        </div>
+        <!-- Cierre del div .grid.three que agrupa las 3 tarjetas de precio. -->
+      </div>
+      <!-- Cierre del div .container de precios. -->
+    </section>
+    <!-- Cierre de la sección #precios.strip. -->
 
-  <!-- PRECIOS --> <!-- Comentario: sección con precios y presentaciones. -->
-  <section id="precios" class="strip"> <!-- Sección precios con id y clase "strip" para estilo de banda. -->
-    <div class="container"> <!-- Contenedor para restricciones de ancho. -->
-      <h2>Precios y presentaciones</h2> <!-- Título de la sección. -->
-      <div class="grid three"> <!-- Grid de tres columnas para mostrar las 3 presentaciones. -->
-        <div class="card price"> <!-- Tarjeta de precio; clases "card" y "price" para estilos específicos. -->
-          <h3>1 kg</h3> <!-- Encabezado que indica la presentación (1 kilogramo). -->
-          <p class="amount">$499 MXN</p> <!-- Párrafo con clase "amount" que muestra el precio; "$499 MXN" texto visible. -->
-          <ul class="bullets"> <!-- Lista de características del paquete 1kg. -->
-            <li>Perfecto para oficinas</li> <!-- Item descriptivo. -->
-            <li>Empaque con válvula</li> <!-- Item descriptivo. -->
-            <li>Tueste reciente</li> <!-- Item descriptivo. -->
-          </ul> <!-- Cierre de la lista bullets. -->
-          <a class="btn-cta" href="#contacto">Comprar</a> <!-- Enlace con clase botón que apunta a la sección #contacto para compra/consulta. -->
-        </div> <!-- Cierre del div .card.price (primer precio). -->
-        <div class="card price featured"> <!-- Segundo bloque de precio con clase adicional "featured" (destacado visualmente). -->
-          <h3>500 g</h3> <!-- Presentación de 500 gramos. -->
-          <p class="amount">$269 MXN</p> <!-- Precio para la presentación de 500 g. -->
-          <ul class="bullets"> <!-- Lista de características del paquete 500 g. -->
-            <li>Tueste medio</li> <!-- Item. -->
-            <li>Blend Sierra</li> <!-- Item. -->
-            <li>Envío incluido</li> <!-- Item: indica que el precio incluye envío. -->
-          </ul> <!-- Cierre de la lista bullets. -->
-          <a class="btn-cta" href="#contacto">Comprar</a> <!-- CTA para comprar que lleva a #contacto. -->
-        </div> <!-- Cierre del div .card.price.featured (segundo precio). -->
-        <div class="card price"> <!-- Tercer bloque de precio. -->
-          <h3>250 g</h3> <!-- Presentación de 250 gramos. -->
-          <p class="amount">$149 MXN</p> <!-- Precio de la presentación de 250 g. -->
-          <ul class="bullets"> <!-- Lista con detalles del paquete pequeño. -->
-            <li>Ideal para probar</li> <!-- Item. -->
-            <li>Grano o molido</li> <!-- Item: opción de presentación. -->
-            <li>Empaque ecológico</li> <!-- Item: ventaja ecológica. -->
-          </ul> <!-- Cierre de la lista bullets. -->
-          <a class="btn-cta" href="#contacto">Comprar</a> <!-- CTA a #contacto para realizar la compra. -->
-        </div> <!-- Cierre del div .card.price (tercer precio). -->
-      </div> <!-- Cierre del div .grid.three que agrupa las 3 tarjetas de precio. -->
-    </div> <!-- Cierre del div .container de precios. -->
-  </section> <!-- Cierre de la sección #precios.strip. -->
+    <section id="faq" class="strip">
+      <h2>Preguntas frecuentes</h2>
+      <ul>
+        <li>¿Puedo elegir el tipo de molienda?</li>
+        <li>¿Cuándo se tuesta?</li>
+        <li>¿Tiempo de entrega?</li>
+      </ul>
+    </section>
 
-  <!-- CONTACTO --> <!-- Comentario: sección de formulario de contacto. -->
-  <section id="contacto"> <!-- Sección con id "contacto". -->
-    <div class="container"> <!-- Contenedor para centrar y dar ancho al formulario. -->
-      <h2>Contacto</h2> <!-- Título de la sección de contacto. -->
-      <p>¿Tienes dudas o quieres hacer un pedido personalizado? Escríbenos:</p> <!-- Texto introductorio al formulario. -->
-      <form class="form-contacto" onsubmit="event.preventDefault(); alert('¡Gracias! Te responderemos pronto.');"> <!-- Formulario con clase "form-contacto". onsubmit previene envío real y muestra un alert; útil para demo o pruebas sin backend. -->
-        <input type="text" placeholder="Nombre completo" required> <!-- Campo de texto para nombre; placeholder visible; required obliga a completar antes de enviar. -->
-        <input type="email" placeholder="Correo electrónico" required> <!-- Campo email que valida formato de correo; placeholder y required. -->
-        <textarea rows="5" placeholder="Mensaje o tipo de café deseado"></textarea> <!-- Área de texto de 5 filas para mensaje; placeholder descriptivo; no tiene required (opcional). -->
-        <button type="submit">✉️ Enviar mensaje</button> <!-- Botón de envío del formulario; al hacer clic dispara onsubmit definido en el <form>. -->
-      </form> <!-- Cierre del formulario .form-contacto. -->
-    </div> <!-- Cierre del div .container del contacto. -->
-  </section> <!-- Cierre de la sección #contacto. -->
+    <!-- CONTACTO -->
+    <!-- Comentario: sección de formulario de contacto. -->
+    <section id="contacto">
+      <!-- Sección con id "contacto". -->
+      <div class="container">
+        <!-- Contenedor para centrar y dar ancho al formulario. -->
+        <h2>Contacto</h2>
+        <!-- Título de la sección de contacto. -->
+        <p>
+          Haz tu pedido o solicita factura. Te respondemos a la brevedad.
+          
+        </p>
+        <!-- Texto introductorio al formulario. -->
+        <form
+          class="form-contacto"
+          onsubmit="event.preventDefault(); alert('¡Gracias! Te responderemos pronto.');"
+        >
+          <!-- Formulario con clase "form-contacto". onsubmit previene envío real y muestra un alert; útil para demo o pruebas sin backend. -->
+          <input type="text" placeholder="Nombre completo" required />
+          <!-- Campo de texto para nombre; placeholder visible; required obliga a completar antes de enviar. -->
+          <input type="email" placeholder="Correo electrónico" required />
+          <!-- Campo email que valida formato de correo; placeholder y required. -->
+          <textarea
+            rows="5"
+            placeholder="¿Qué presentación deseas?"
+          ></textarea>
+          <!-- Área de texto de 5 filas para mensaje; placeholder descriptivo; no tiene required (opcional). -->
+          <button type="submit">✉️ Enviar</button>
+          <!-- Botón de envío del formulario; al hacer clic dispara onsubmit definido en el <form>. -->
+        </form>
+        <!-- Cierre del formulario .form-contacto. -->
+      </div>
+      <!-- Cierre del div .container del contacto. -->
+    </section>
+    <!-- Cierre de la sección #contacto. -->
 
-  <!-- FOOTER --> <!-- Comentario: pie de página del sitio. -->
-  <footer> <!-- Elemento semántico footer. -->
-    <p>&copy; <span id="year"></span> Café de Altura — Tradición con aroma</p> <!-- Párrafo que incluye el símbolo de copyright y un <span id="year"> que JS rellenará con el año actual. -->
-  </footer> <!-- Cierre del footer. -->
+    <!-- FOOTER -->
+    <!-- Comentario: pie de página del sitio. -->
+    <footer>
+      <!-- Elemento semántico footer. -->
+      <p>&copy; <span id="year"></span> Café de Altura — Todos los derechos reservados</p>
+      <p>Examen Amador Ayala</p>
+      <!-- Párrafo que incluye el símbolo de copyright y un <span id="year"> que JS rellenará con el año actual. -->
+    </footer>
+    <!-- Cierre del footer. -->
 
-  <script src="static/js/negocio.js"></script> <!-- Incluye el script negocio.js ubicado en static/js; se carga al final del body para que el DOM ya esté disponible. -->
-</body> <!-- Cierre del elemento body. -->
-</html> <!-- Cierre del elemento html: fin del documento HTML. -->
+    <script src="static/js/negocio.js"></script>
+    <!-- Incluye el script negocio.js ubicado en static/js; se carga al final del body para que el DOM ya esté disponible. -->
+  </body>
+  <!-- Cierre del elemento body. -->
+</html>
+<!-- Cierre del elemento html: fin del documento HTML. -->
