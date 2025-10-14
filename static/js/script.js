@@ -7,15 +7,15 @@ function mostrarTareas(mes) {
     octubre: [
       {
         texto: "Practica fotografias varios - Amador Ayala",
-        url: "../static/imagenes.html",
+        url: "/imagenes.html",
       },
       {
         texto: "Practica General Examen - Amador Ayala",
-        url: "../static/examen.html",
+        url: "/examen.html",
       },
       {
         texto: "examen U2 - Amador Ayala",
-        url: "../static/examen_U2_Amador_Ayala_Frontend/negocio.html",
+        url: "/examen_U2_Amador_Ayala_Frontend/negocio.html",
       },
     ],
     noviembre: [
