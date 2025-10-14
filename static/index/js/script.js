@@ -11,7 +11,7 @@ function mostrarTareas(mes) {
       },
       {
         texto: "Practica General Examen - Amador Ayala",
-        url: "../imagenes/examen.html",
+        url: "../examen/examen.html",
       },
       {
         texto: "Examen U2 - Amador Ayala",
